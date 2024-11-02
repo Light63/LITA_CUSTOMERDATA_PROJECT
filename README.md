@@ -149,7 +149,7 @@ EDA involves exploring the data to answer some questions about the data such as;
   WHERE CONDITION = TRUE
   ```
 
-RETRIEVE THE TOTAL NUMBER OF CUSTOMERS FROM EACH REGION
+1. RETRIEVE THE TOTAL NUMBER OF CUSTOMERS FROM EACH REGION
 ```
 SELECT region, COUNT (CustomerName) as Number_of_Customers
 FROM [dbo].[CustomerData_Project]
