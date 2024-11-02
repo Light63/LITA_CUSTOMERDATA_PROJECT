@@ -228,100 +228,80 @@ WHERE Product NOT IN (
 )
 
 
------PROJECT QUESTION NUMBER 2 QUERIES------
+PROJECT QUESTION NUMBER 2 QUERIES
 
 
------1.  RETRIEVE THE TOTAL NUMBER OF CUSTOMERS FROM EACH REGION-----
+1.  RETRIEVE THE TOTAL NUMBER OF CUSTOMERS FROM EACH REGION
+
 
 ```
-
 SELECT region, COUNT (CustomerName) as Number_of_Customers
 FROM [dbo].[CustomerData_Project]
 group by Region
 Order by Region
-
 ```
 
-SELECT * FROM [dbo].[CustomerData_Project]
-
-------2. FIND THE MOST POPULAR SUBSCRIPTION TYPE BY THE NUMBER oF CUSTOMERS---
+2. FIND THE MOST POPULAR SUBSCRIPTION TYPE BY THE NUMBER oF CUSTOMERS
 
 ```
-
 select top 1(SubscriptionType),
 COUNT (CustomerID) as TOTAL_CUSTOMERS
 from [dbo].[CustomerData_Project]
 group by SubscriptionType
 order by TOTAL_CUSTOMERS desc
-
 ```
 
-------3. FIND CUSTOMERS WHO CANCELLED THEIR SUBSCRIPTION WITHIN 6 MONTHS----
-SELECT * FROM [dbo].[CustomerData_Project]
+3. FIND CUSTOMERS WHO CANCELLED THEIR SUBSCRIPTION WITHIN 6 MONTHS
 
 ```
 SELECT CustomerID, CustomerName, SubscriptionStart, SubscriptionEnd,canceled
 from [dbo].[CustomerData_Project]
 where canceled = 1
 and datediff(month, subscriptionEnd, SubscriptionStart) <= 6
-
 ```
 
-------4. CALCULATE THE AVERAGE SUBSCRIPTION DURATION FOR ALL CUSTOMERS----
+4. CALCULATE THE AVERAGE SUBSCRIPTION DURATION FOR ALL CUSTOMERS
+
 
 ```
-
 select  AVG(DATEDIFF(day, SubscriptionStart, SubscriptionEnd)) 
 as avg_subscription_duration
 from [dbo].[CustomerData_Project]
-
 ```
 
-------5. FIND CUSTOMERS WITH SUBCRIPTIONS LONGER THAN 12 MONTHS------
+5. FIND CUSTOMERS WITH SUBCRIPTIONS LONGER THAN 12 MONTHS
 
 ```
-
 SELECT CustomerID, CustomerName, SubscriptionStart, SubscriptionEnd
 from [dbo].[CustomerData_Project]
 where datediff(month, subscriptionEnd, SubscriptionStart) > 12
-
 ```
 
-------6. CALCULATE TOTAL REVENUE BY SUBSCRIPTION TYPE----
+6. CALCULATE TOTAL REVENUE BY SUBSCRIPTION TYPE
 
 ```
-
 select SubscriptionType,  sum (revenue) as Total_Revenue
 from [dbo].[CustomerData_Project]
 group by Subscriptiontype
-
 ```
 
-select * from [dbo].[CustomerData_Project]
-
-------7. FIND THE TOP THREE REGIONS BY SUBSCRIPTION CANCELLATIONS---
+7. FIND THE TOP THREE REGIONS BY SUBSCRIPTION CANCELLATIONS
 
 ```
-
 SELECT REGION, COUNT(CustomerID) As total_cancellations
 from [dbo].[CustomerData_Project]
 where canceled = 1
 group by region
 order by total_cancellations DESC
-
 ```
 
-------8. FIND THE TOTAL NUMBER OF ACTIVE AND CANCELLED SUBSCRIPTIONS---
+8. FIND THE TOTAL NUMBER OF ACTIVE AND CANCELLED SUBSCRIPTIONS
 
 ```
-
 select sum (case when Canceled = 0 then 1 else 0 end) as activeSubsriptions,
 sum(case when Canceled = 1 then 1 else 0 end) as CanceledSubscriptions
 from [dbo].[CustomerData_Project]
-
 ```
-
----
 
 ###  Data Visualization for Customer Subscription Data
 
