@@ -28,17 +28,6 @@
 
 This project analyses customer data for an apparel and accessories brand to gain insights into customer behaviour, subscription trends, and revenue generation. This analysis will help inform marketing strategies, improve customer retention, and enhance product offerings.
 
-Dataset Description:
-The dataset includes the following columns:
-
-
-Expected Outcomes:
-
-Comprehensive insights into customer demographics and behaviours.
-Data-driven recommendations for marketing strategies and customer engagement.
-Identification of trends that can inform product development and inventory management.
-This analysis will empower the brand to enhance its customer experience and optimize its offerings to meet customer needs effectively.
-
 ---
 
 ### Data Sources
@@ -182,15 +171,15 @@ Also, the Basic subscription type emerges as the most popular among customers, s
 
 ### Recommendations  for Customer Subscription Data
 
-Enhance the Basic Subscription Offering: Since the Basic subscription is the most popular, consider enhancing its features or benefits to increase customer satisfaction and retention. This could include exclusive discounts, early access to new collections, or personalized recommendations.
+Enhance the Basic Subscription Offering: Since the Basic subscription is the most popular, considerations in enhancing its features or benefits to increase customer satisfaction and retention is important. This could include exclusive discounts, early access to new collections, or personalized recommendations.
 
 Targeted Retention Strategies: It's crucial to analyze the reasons behind cancellations, with nearly half of the subscriptions being cancelled.  Proactive customer feedback mechanisms should be Implemented to identify pain points and address them promptly. Also, targeted re-engagement campaigns for those who have cancelled should be Considered.
 
-Segmented Marketing Efforts: Utilize customer segmentation based on region and subscription type to tailor marketing messages. Personalized campaigns can increase engagement and conversion rates, especially for those in the Basic subscription tier.
+Segmented Marketing Efforts: Customer segmentation based on region and subscription type to tailor marketing messages should be Utilized. Personalized campaigns can increase engagement and conversion rates, especially for those in the Basic subscription tier.
 
-Data-Driven Decision Making: Continuously analyze customer data to track trends over time. Regular monitoring of subscription metrics will enable the brand to make informed decisions about inventory, product offerings, and promotional strategies.
+Data-Driven Decision Making: Customer data should be continuously analyzed to track trends over time. Regular monitoring of subscription metrics will enable the brand to make informed decisions about inventory, product offerings, and promotional strategies.
 
-Loyalty Programs: Introduce loyalty programs that reward long-term subscribers, encouraging them to stay with the brand and reducing churn rates.
+Loyalty Programs: Loyalty programs that reward long-term subscribers introduced, encouraging them to stay with the brand and reducing churn rates.
 
-By focusing on these strategies, the brand can enhance customer loyalty, improve subscription retention, and ultimately drive revenue growth.
+In summary, focusing on these strategies for the brand can enhance customer loyalty, improve subscription retention, and ultimately drive revenue growth.
 
