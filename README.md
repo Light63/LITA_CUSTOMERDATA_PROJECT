@@ -149,6 +149,178 @@ EDA involves exploring the data to answer some questions about the data such as;
   WHERE CONDITION = TRUE
   ```
 
+  ```
+create database LITA
+
+select * from SalesData_Project
+
+-----question 1, TOTAL SALES FOR EACH PRODUCT CATEGORY---
+
+SELECT Product,
+sum (sales_Revenue) As Total_sales
+from SalesData_Project
+group by product
+
+----Question 2, number of sales transactions in each region-------
+
+select Region,
+count (sales_Revenue) as number_sales_of_transactions
+from SalesData_Project
+group by Region
+
+------question 3. the highest selling product by total sales value-------
+
+select Top 1 product,
+sum(sales_Revenue) as total_sales_value
+from SalesData_Project
+group by product
+order by total_sales_value desc
+
+select * from SalesData_Project
+
+----question 4. calculate total revenue by product-----
+
+select product, sum (sales_Revenue) as total_Revenue
+FROM SalesData_Project
+GROUP BY product
+order by total_revenue 
+
+
+----question 5. calculate monthly sales totals for the current year---
+
+
+SELECT FORMAT(OrderDate, 'yyyy-MM') AS Month, SUM(sales_Revenue) AS Total_Sales
+FROM SalesData_Project
+WHERE OrderDate >= DATEFROMPARTS(YEAR(GETDATE()), 1, 1) -- Start of the current year
+  AND OrderDate < DATEADD(YEAR, 1, DATEFROMPARTS(YEAR(GETDATE()), 1, 1)) -- Start of the next year
+GROUP BY FORMAT(OrderDate, 'yyyy-MM')
+ORDER BY Month
+
+-----question 6. top 5 customers by total purchase amount----
+
+select top 5(Customer_id),
+sum (sales_Revenue) as total_purchase_amount
+from SalesData_Project
+group by Customer_Id
+order by total_purchase_amount desc
+
+----question 7. calculate percentage of total sales contributed by each region----
+
+select region,
+sum (sales_Revenue) as total_sales,
+round ((select sum (sales_Revenue)/ cast((select sum(sales_Revenue) 
+from  SalesData_Project) as float) *100), 0) as 
+percentage_total_sales
+from SalesData_Project
+group by region
+order by region desc
+
+-----question 8. identify products with no sales in the last quarter-----
+
+select * from SalesData_Project
+
+SELECT DISTINCT Product
+FROM SalesData_Project
+WHERE Product NOT IN (
+    SELECT Product
+    FROM SalesData_Project
+    WHERE OrderDate >= DATEADD(QUARTER, -1, GETDATE())
+)
+
+
+-----PROJECT QUESTION NUMBER 2 QUERIES------
+
+
+-----1.  RETRIEVE THE TOTAL NUMBER OF CUSTOMERS FROM EACH REGION-----
+
+```
+
+SELECT region, COUNT (CustomerName) as Number_of_Customers
+FROM [dbo].[CustomerData_Project]
+group by Region
+Order by Region
+
+```
+
+SELECT * FROM [dbo].[CustomerData_Project]
+
+------2. FIND THE MOST POPULAR SUBSCRIPTION TYPE BY THE NUMBER oF CUSTOMERS---
+
+```
+
+select top 1(SubscriptionType),
+COUNT (CustomerID) as TOTAL_CUSTOMERS
+from [dbo].[CustomerData_Project]
+group by SubscriptionType
+order by TOTAL_CUSTOMERS desc
+
+```
+
+------3. FIND CUSTOMERS WHO CANCELLED THEIR SUBSCRIPTION WITHIN 6 MONTHS----
+SELECT * FROM [dbo].[CustomerData_Project]
+
+```
+SELECT CustomerID, CustomerName, SubscriptionStart, SubscriptionEnd,canceled
+from [dbo].[CustomerData_Project]
+where canceled = 1
+and datediff(month, subscriptionEnd, SubscriptionStart) <= 6
+
+```
+
+------4. CALCULATE THE AVERAGE SUBSCRIPTION DURATION FOR ALL CUSTOMERS----
+
+```
+
+select  AVG(DATEDIFF(day, SubscriptionStart, SubscriptionEnd)) 
+as avg_subscription_duration
+from [dbo].[CustomerData_Project]
+
+```
+
+------5. FIND CUSTOMERS WITH SUBCRIPTIONS LONGER THAN 12 MONTHS------
+
+```
+
+SELECT CustomerID, CustomerName, SubscriptionStart, SubscriptionEnd
+from [dbo].[CustomerData_Project]
+where datediff(month, subscriptionEnd, SubscriptionStart) > 12
+
+```
+
+------6. CALCULATE TOTAL REVENUE BY SUBSCRIPTION TYPE----
+
+```
+
+select SubscriptionType,  sum (revenue) as Total_Revenue
+from [dbo].[CustomerData_Project]
+group by Subscriptiontype
+
+```
+
+select * from [dbo].[CustomerData_Project]
+
+------7. FIND THE TOP THREE REGIONS BY SUBSCRIPTION CANCELLATIONS---
+
+```
+
+SELECT REGION, COUNT(CustomerID) As total_cancellations
+from [dbo].[CustomerData_Project]
+where canceled = 1
+group by region
+order by total_cancellations DESC
+
+```
+
+------8. FIND THE TOTAL NUMBER OF ACTIVE AND CANCELLED SUBSCRIPTIONS---
+
+```
+
+select sum (case when Canceled = 0 then 1 else 0 end) as activeSubsriptions,
+sum(case when Canceled = 1 then 1 else 0 end) as CanceledSubscriptions
+from [dbo].[CustomerData_Project]
+
+```
+
 ---
 
 ###  Data Visualization for Customer Subscription Data
