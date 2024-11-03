@@ -53,7 +53,7 @@ vii. Cancelled: Indicates whether the subscription has been cancelled (Yes/No).
 
 viii. Revenue: Total revenue generated from the customer.
 
-ix. DURATION: Duration of the subscription in months.
+ix. Duration: Duration of the subscription in months.
 
 x. Key Areas of Analysis.
 
@@ -116,7 +116,7 @@ In the initial phase of the data cleaning and preparations, the following action
 EDA involves exploring the data to answer some questions about the data such as;
 - What is the overall sales trend
 - Which products are top sellers
-- What are the products on peak sales? (pivot tables and charts for both datasets here)
+- What are the products on peak sales?
 
 
   ![Alt text for image](https://github.com/Light63/LITA_CUSTOMERDATA_PROJECT/blob/main/EXCEL%20CUSTOMER%20DATA.JPG?raw=true)
@@ -231,7 +231,7 @@ Figure 3 shows the brand's customers' subscription trends. This gives insights i
 
 ### Results and Insights for Customer Subscription Data
 
-The total number of Subscriptions reflects 33,787, indicating a robust customer base engaging with the brand’s offerings. The total number of active and cancelled Subscriptions is 18,612 and 15,175, respectively. Therefore, the current active subscriptions represent a significant portion of the customer base, while cancelled subscriptions highlight a substantial churn rate that warrants further investigation.
+The total number of Subscriptions reflects 33,787, indicating a robust customer base engaging with the brand’s offerings. The total number of active and cancelled Subscriptions was 18,612 and 15,175, respectively. Therefore, the current active subscriptions represent a significant portion of the customer base, while cancelled subscriptions highlight a substantial churn rate that warrants further investigation.
 Also, the Basic subscription type emerges as the most popular among customers, suggesting that it meets the needs of a significant segment of the customer base.
 
 ---
