@@ -222,24 +222,23 @@ from [dbo].[CustomerData_Project]
 ###  Data Visualization for Customer Subscription Data
 
 
-![ALT text for image](https://github.com/Light63/DATA_ANALYSIS_JOURNEY-_WITH_LITA/blob/main/BI%20CUSTOMER%20VISUALS1.JPG?raw=true)
+![ALT text for image](https://github.com/Light63/LITA_CUSTOMERDATA_PROJECT/blob/main/BI%20CUSTOMER%20VISUALS1.JPG?raw=true)
 
 
-
-Figure 3: Shows the subscription trends of the customers in the brand. This gives insights on the most popular subscription type loved by the brand's customers, and the number of active and cancelled  subscriptions. 
+Figure 3 shows the brand's customers' subscription trends. This gives insights into the most popular subscription type loved by the brand's customers and the number of active and cancelled  subscriptions. 
 
 ---
 
 ### Results and Insights for Customer Subscription Data
 
-The total count of Subscriptions reflects a total of 33,787 subscriptions, indicating a robust customer base engaging with the brand’s offerings. The total Active and cancelled Subscriptions are 18,612 and 15,175 respectively. therefore,  the current active subscriptions represent a significant portion of the customer base while cancelled subscriptions highlight a substantial churn rate that warrants further investigation.
+The total number of Subscriptions reflects 33,787, indicating a robust customer base engaging with the brand’s offerings. The total number of active and cancelled Subscriptions is 18,612 and 15,175, respectively. Therefore, the current active subscriptions represent a significant portion of the customer base, while cancelled subscriptions highlight a substantial churn rate that warrants further investigation.
 Also, the Basic subscription type emerges as the most popular among customers, suggesting that it meets the needs of a significant segment of the customer base.
 
 ---
 
 ### Recommendations  for Customer Subscription Data
 
-Enhance the Basic Subscription Offering: Since the Basic subscription is the most popular, considerations in enhancing its features or benefits to increase customer satisfaction and retention is important. This could include exclusive discounts, early access to new collections, or personalized recommendations.
+Enhance the Basic Subscription Offering: Since the Basic subscription is the most popular, it is important to consider enhancing its features or benefits to increase customer satisfaction and retention. This could include exclusive discounts, early access to new collections, or personalized recommendations.
 
 Targeted Retention Strategies: It's crucial to analyze the reasons behind cancellations, with nearly half of the subscriptions being cancelled.  Proactive customer feedback mechanisms should be Implemented to identify pain points and address them promptly. Also, targeted re-engagement campaigns for those who have cancelled should be Considered.
 
@@ -247,7 +246,7 @@ Segmented Marketing Efforts: Customer segmentation based on region and subscript
 
 Data-Driven Decision Making: Customer data should be continuously analyzed to track trends over time. Regular monitoring of subscription metrics will enable the brand to make informed decisions about inventory, product offerings, and promotional strategies.
 
-Loyalty Programs: Loyalty programs that reward long-term subscribers introduced, encouraging them to stay with the brand and reducing churn rates.
+Loyalty Programs: Loyalty programs that reward long-term subscribers are introduced, encouraging them to stay with the brand and reducing churn rates.
 
 In summary, focusing on these strategies for the brand can enhance customer loyalty, improve subscription retention, and ultimately drive revenue growth.
 
