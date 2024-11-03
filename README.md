@@ -119,8 +119,8 @@ EDA involves exploring the data to answer some questions about the data such as;
 - What are the products on peak sales? (pivot tables and charts for both datasets here)
 
 
-  ![Alt text for image](https://github.com/Light63/DATA_ANALYSIS_JOURNEY-_WITH_LITA/blob/main/EXCEL%20CUSTOMER%20DATA.JPG?raw=true)
-
+  ![Alt text for image](https://github.com/Light63/LITA_CUSTOMERDATA_PROJECT/blob/main/EXCEL%20CUSTOMER%20DATA.JPG?raw=true)
+  
 
   Figure 1: Shows the overall trend sales  for the customer subscription data using pivot tables and charts
 
