@@ -219,6 +219,8 @@ sum(case when Canceled = 1 then 1 else 0 end) as CanceledSubscriptions
 from [dbo].[CustomerData_Project]
 ```
 
+---
+
 ###  Data Visualization for Customer Subscription Data
 
 
